@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="top_songs">Top Songs</string>
+    <string name="john_mayer">John Mayer</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="SAVED_SEARCH">SAVED_SEARCH</string>
+    <string name="DEFAULT_SEARCH_VALUE"></string>
+    <string name="no_lyrics_to_show">No Lyrics To Show</string>
+    <string name="by">by</string>
+    <string name="no_lyrics_were_found">No Lyrics Were Found</string>
+    <string name="tab_text_1">Search</string>
+    <string name="tab_text_2">Favourites</string>
+    <string name="no_favourites">No Favourites</string>
+    <string name="successfully_added">Added To Favourites</string>
+    <string name="DIALOG_POSITIVE">OK</string>
+</resources>

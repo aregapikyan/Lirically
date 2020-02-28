@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favouritesSongRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/layout_animation"
+        android:paddingBottom="50dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/artistBottomPB"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lazyloader_animDur="200"
+        app:lazyloader_dotsDist="8dp"
+        app:lazyloader_dotsRadius="3dp"
+        app:lazyloader_firstDelayDur="30"
+        app:lazyloader_firstDotColor="#000"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="80"
+        app:lazyloader_secondDotColor="#000"
+        app:lazyloader_thirdDotColor="#000" />
+
+    <TextView
+        android:id="@+id/noFavouritesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_favourites"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

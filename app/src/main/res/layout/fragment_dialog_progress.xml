@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.agrawalsuneet.dotsloader.loaders.CircularDotsLoader
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:loader_animDur="80"
+        app:loader_bigCircleRadius="16dp"
+        app:loader_circleRadius="5dp"
+        app:loader_defaultColor="#C3C3C3"
+        app:loader_firstShadowColor="#AAAAAA"
+        app:loader_secondShadowColor="#989898"
+        app:loader_selectedColor="#838383" />
+
+</LinearLayout>

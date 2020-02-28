@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/songArtIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:transitionName="song_art_transition"
+            tools:src="@drawable/test_bitmap" />
+
+        <FrameLayout
+            android:id="@+id/blurViewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60000000" />
+
+        <View
+            android:id="@+id/dividerView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="#85000000" />
+
+        <View
+            android:id="@+id/dividerViewBorder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignTop="@id/dividerView"
+            android:background="#00000000" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginBottom="19dp"
+            android:src="@android:color/white"
+            android:transitionName="artist_image_transition" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/artistIV"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop"
+            android:transitionName="artist_image_transition"
+            tools:src="@drawable/test_image" />
+
+        <TextView
+            android:id="@+id/songTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/dividerViewBorder"
+            android:layout_alignTop="@id/artistIV"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@id/artistIV"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            tools:text="New Light" />
+
+        <TextView
+            android:id="@+id/songArtistTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerViewBorder"
+            android:layout_alignBottom="@id/artistIV"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@id/artistIV"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:transitionName="artist_name_transition"
+            tools:text="John Mayer" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

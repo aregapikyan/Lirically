@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:clipToPadding="false">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/artistAB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:elevation="26dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="#000"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/artistImgHeaderIV"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test_image"
+                android:transitionName="artist_image_transition"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#50000000" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/artistToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:theme="@style/AppTheme"
+                app:layout_collapseMode="pin"
+                tools:title="John Mayer" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingTop="8dp"
+                android:id="@+id/searchSongRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:layoutAnimation="@anim/layout_animation"
+                android:paddingBottom="50dp" />
+
+            <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                android:id="@+id/artistBottomPB"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lazyloader_animDur="200"
+                app:lazyloader_dotsDist="8dp"
+                app:lazyloader_dotsRadius="3dp"
+                app:lazyloader_firstDelayDur="30"
+                app:lazyloader_firstDotColor="#000"
+                app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                app:lazyloader_secondDelayDur="80"
+                app:lazyloader_secondDotColor="#000"
+                app:lazyloader_thirdDotColor="#000" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

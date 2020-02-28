@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            app:elevation="16dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <include
+                android:id="@+id/searchLayout"
+                layout="@layout/layout_search" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchResultCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardElevation="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchResultRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:clipToPadding="false"
+                android:paddingBottom="50dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:visibility="visible" />
+
+            <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                android:id="@+id/searchBottomPB"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lazyloader_animDur="200"
+                app:lazyloader_dotsDist="8dp"
+                app:lazyloader_dotsRadius="3dp"
+                app:lazyloader_firstDelayDur="30"
+                app:lazyloader_firstDotColor="#000"
+                app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                app:lazyloader_secondDelayDur="80"
+                app:lazyloader_secondDotColor="#000"
+                app:lazyloader_thirdDotColor="#000" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

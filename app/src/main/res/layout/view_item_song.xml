@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/ripple_item_song"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewForeground"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/ripple_item_song"
+        android:elevation="1dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/songArtIV"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:transitionName="song_art_transition"
+            app:elevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/test_image_background" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:src="#50000000"
+            app:elevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintLeft_toRightOf="@id/songArtIV" />
+
+        <TextView
+            android:id="@+id/songTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#494949"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/divider"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="New Light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@android:color/holo_red_light">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_delete_forever"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+
+
